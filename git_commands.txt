@@ -1,0 +1,55 @@
+1. git config --global user.name "basitnaqash"      					 // for configuring username.
+2. git config --global user.email "basitnaqash@gmail.com"        			//for configuring email.
+3. git init 									// for creating empty git repository.
+4. git add file or:	 git add -A 					// for putting file in staging area or index.
+5. git diff --cached or simply: git diff 				//For seeing difference between working tree 									//and staging area.
+   git diff --staged							//for seeing difference between staged and 									//commit area or for seeing what we are about to 									//commit.
+
+
+6. git status 								// for seeing the summary of the situation.
+7. git commit or: git commit -a or: git commit -m "commit message"	// for committing the modified files. 
+		or git commit -am "commit message" 		// same as commit -a.
+
+8. git log 									//for viewing the history of changes.
+9. git log -p 								// for seeing what changed with each commit.
+10. git log --stat --summary						// to see the overview of the changes.
+11. git branch <branch name>						// to create a new branch.
+12. git checkout <branch name>						// to switch branches.
+13. git branch								// to see all branches. * is current branch.
+14. git merge <branch name>						// to merge branches. 
+15. gitk 								// for graphical representation of history.
+16. git branch -d <branch name>						// to delete a branch.
+17. git branch -D <branch name>						// delete a branch without saving changes.
+18. git commit --amend -m "new commit message"			// to change commit message of most recent commit.
+19. git pull url						// pulls the repository specified by url.
+20. git clone ~/desktop/newrep ~/desktop/otherrep		// to clone repository.
+21. git config --list							// shows configuration details.
+22. git rm <filename>						//remove file from working tree and staged area.
+23. git rm --cached <filename>					//remove file only from staged area.
+23. git checkout --<filename>				// restore file in working tree back to one in staging area.
+24. git reset HEAD <filename>				//restore file in staging area from HEAD area or commit area.
+25. git checkout <sha1 id> -- <filename>		// to restore file from commit with sha1 id..
+26. vi .gitignore		// make this file and put file and directory name in the file for git to ignore them.
+27. ls							// list files
+
+
+
+
+
+Notes: 
+index is staging area...
+
+after doing any changes in the file, put it back in staging area or index to commit...
+
+to automatically add modified files (not new files) to the index, and commit, all in one step use: git commit -a.
+
+In commit editor, press esc and then :x to exit the editor and return to command line.
+Typing :q instead, will exit the editor without saving (and commit will be aborted).
+Git gives each commit a unique id.
+
+TWO TYPES OF BRANCHES:
+1. INTEGRATION BRANCH
+2. TOPIC BRANCH
+
+git branch -d <branch name>	will ensure that the changes are already merged before deleting.
+git branch-D <branch name>	will not check that...
